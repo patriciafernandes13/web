@@ -42,5 +42,5 @@ jobs:
           chmod 600 chave.pem
           ssh -o StrictHostKeyChecking=no -i chave.pem gestor@20.199.129.62 "sudo mkdir -p /var/www/html/patricia; sudo apt update; sudo apt install apache2; sudo chmod -R 777 /var/www/html"
           scp -o StrictHostKeyChecking=no -i chave.pem ./* gestor@20.199.129.62:/var/www/html/patricia/index.html
-          scp -o StrictHostKeyChecking=no -i chave.pem -r ./assets gestor@20.199.129.62:/var/www/html/patricia/assets
+          scp -o StrictHostKeyChecking=no -i chave.pem -r ./assets gestor@20.199.129.62:/var/www/html/patricia/assets/
           ls -l
